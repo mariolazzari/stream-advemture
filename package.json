@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mariolazzari/stream-advemture#readme",
   "dependencies": {
+    "split2": "^4.1.0",
     "through2": "^4.0.2"
   }
 }

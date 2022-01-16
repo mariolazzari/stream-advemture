@@ -1,3 +1,10 @@
 const through = require("through2");
 
-//const stream = through(write, end);
+function write(chunk, _encoding, next) {
+  chunk = chunk.toString().toUpperCase();
+  this.push(chunk);
+  next();
+}
+
+const stream = through(write);
+process.stdin.pipe(stream).pipe(process.stdout);
